@@ -1,0 +1,13 @@
+{
+    "name": "bestune/venezuela",
+    "description": "Bestune Venezuela",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}
