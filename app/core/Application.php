@@ -7,10 +7,14 @@ class Application {
     protected $params = [];
     
     public function __construct() {
+        // Constructor vacío por ahora
+    }
+    
+    public function run() {
         $url = $this->parseUrl();
         
         // Buscar controlador
-        if(file_exists(APPROOT . '/controllers/' . ucwords($url[0] ?? '') . 'Controller.php')) {
+        if(isset($url[0]) && file_exists(APPROOT . '/Controllers/' . ucwords($url[0]) . 'Controller.php')) {
             $this->controller = ucwords($url[0]) . 'Controller';
             unset($url[0]);
         } else {
